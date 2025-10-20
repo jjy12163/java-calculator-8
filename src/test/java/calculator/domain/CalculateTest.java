@@ -10,14 +10,24 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class CalculateTest {
 
-    ArrayList<Integer> intNumArr = new ArrayList<Integer>(Arrays.asList(1,2,3));
+    String input_custom = "//;\n1,2;3";
+    String input_noCustom = "1,2";
 
     @Test
     @DisplayName("Calculate 기능 테스트")
     public void Calculate_o() {   // custom된 값이 잘 계산되는지
-        Integer result = Calculate.Calculate(intNumArr);
+        Integer result = Calculate.Calculate(input_custom);
 
         Integer sum = 6;
+        assertThat(result).isEqualTo(sum);
+    }
+
+    @Test
+    @DisplayName("Calculate 기능 테스트")
+    public void Calculate1_o() {   // custom된 값이 잘 계산되는지
+        Integer result = Calculate.Calculate(input_noCustom);
+
+        Integer sum = 3;
         assertThat(result).isEqualTo(sum);
     }
 }
