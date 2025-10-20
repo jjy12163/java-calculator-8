@@ -4,7 +4,7 @@ public class extractCustomDelimiter {
 
     // 커스텀 구분자 존재 확인
     public static boolean isExistCustomDelimiter(String input) {
-        if (input.indexOf("//") == 0 && input.matches("\n")) {   // 구분자가 하나가 아닐 경우 대비
+        if (input.indexOf("//") == 0 && input.contains("\n")) {   // 구분자가 하나가 아닐 경우 대비
             return true;
         } else {
             return false;
