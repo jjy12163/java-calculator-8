@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class CalculateTest {
 
-    String input_custom = "//;\n1,2;3";
+    String input_custom = "//;\\n1;2;3";
     String input_noCustom = "1,2";
 
     @Test

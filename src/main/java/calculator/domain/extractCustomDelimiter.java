@@ -4,7 +4,7 @@ public class extractCustomDelimiter {
 
     // 커스텀 구분자 존재 확인
     public static boolean isExistCustomDelimiter(String input) {
-        if (input.indexOf("//") == 0 && input.contains("\n")) {   // 구분자가 하나가 아닐 경우 대비
+        if (input.indexOf("//") == 0 && input.contains("\\n")) {   // 구분자가 하나가 아닐 경우 대비
             return true;
         } else {
             return false;
@@ -13,7 +13,7 @@ public class extractCustomDelimiter {
 
     public static String extractCustomDelimiter(String input) {
         try {// 커스텀 구분자가 제대로 있는 경우
-            int endOfDelimiter = input.indexOf("\n");
+            int endOfDelimiter = input.indexOf("\\n");
             String delimiter = input.substring(2, endOfDelimiter);
             return delimiter;
         } catch (Exception e) {
@@ -23,7 +23,7 @@ public class extractCustomDelimiter {
 
     public static String notCustomDelimiter(String input) {  // 커스텀 구분자 없앤 계산식
         if(isExistCustomDelimiter(input)) {
-            int endOfDelimiter = input.indexOf("\n") + 1;
+            int endOfDelimiter = input.indexOf("\\n") + 2;
             String newInput = input.substring(endOfDelimiter);
             return newInput;
         } else {

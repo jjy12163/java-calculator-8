@@ -12,12 +12,11 @@ public class SplitString {
         String[] numArr = new String[0];
         ArrayList<Integer> intNumArr = new ArrayList<>();
 
-        try {// 구분자 리스트
-            String[] delimiterList;
+        try { // 구분자 리스트
             String delimiterListStr;    // delimiterList에 있는 구분자를 "|"로 합함
-            delimiterList = UpdateDelimiterList(input);
+            String[] delimiterList = UpdateDelimiterList(input);   // 구분자로 지정된 리스트
 
-            if (isExistCustomDelimiter(input)) {  // custom 구분자가 있을 경우
+            if (isExistCustomDelimiter(input)) {  // custom 구분자가 있을 경우 제거
                 input = notCustomDelimiter(input);
             }
 
