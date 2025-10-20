@@ -27,7 +27,11 @@ public class SplitString {
 
             // num에 문자열 남아있는 경우 - 에러 발생
             for(String num : numArr) {
-                intNumArr.add(Integer.parseInt(num));
+                if(num.contains("-")) {
+                    throw new IllegalArgumentException("음수를 입력하셨거나 구분자를 잘못 입력하셨습니다.");
+                }
+                int n = Integer.parseInt(num);
+                intNumArr.add(n);
             }
 
             return intNumArr;
