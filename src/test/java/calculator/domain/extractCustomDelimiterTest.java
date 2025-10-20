@@ -41,7 +41,6 @@ public class extractCustomDelimiterTest {
     @Test
     @DisplayName("extractCustomDelimiterTest 기능 테스트_x")
     public void extractCustomDelimiterTest_x() {   // 커스텀 구분자가 제대로 추출되는지
-
         try {
             String result = extractCustomDelimiter.extractCustomDelimiter(input_noCustom);
         } catch(IllegalArgumentException e) {

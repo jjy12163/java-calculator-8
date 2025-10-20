@@ -15,7 +15,6 @@ public class extractCustomDelimiter {
         try {// 커스텀 구분자가 제대로 있는 경우
             int endOfDelimiter = input.indexOf("\n");
             String delimiter = input.substring(2, endOfDelimiter);
-            System.out.println("delimiter = " + delimiter);
             return delimiter;
         } catch (Exception e) {
             throw new IllegalArgumentException("커스텀 구분자가 없는 input입니다.");
