@@ -4,7 +4,7 @@ import static calculator.domain.extractCustomDelimiter.*;
 
 public class UpdateDelimiterList {
 
-    public String[] UpdateDelimiterList(String input) {
+    public static String[] UpdateDelimiterList(String input) {
 
         String[] delimiterList;
         if(isExistCustomDelimiter(input)) {

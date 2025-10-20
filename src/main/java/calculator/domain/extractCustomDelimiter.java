@@ -21,7 +21,7 @@ public class extractCustomDelimiter {
         }
     }
 
-    public String notCustomDelimiter(String input) {  // 커스텀 구분자 없앤 계산식
+    public static String notCustomDelimiter(String input) {  // 커스텀 구분자 없앤 계산식
         int endOfDelimiter = input.indexOf("/n") + 1;
         String newInput = input.substring(endOfDelimiter);
         return newInput;
